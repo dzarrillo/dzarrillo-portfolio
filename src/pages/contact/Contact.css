@@ -1,0 +1,66 @@
+form {
+    margin: 10% 35%;
+    padding: 1.2rem;
+    background-color: lightyellow;
+    /* background-color: #ee6352; */
+    color: white;
+    
+    box-shadow: 5px 5px 2px rgb(168, 157, 157);
+  }
+  legend {
+      color: #ee6352;
+  }
+  textarea {
+    background-color: #ee6352;
+    padding-left: 3px;
+    color: white;
+  }
+  fieldset {
+    /* background-color: lightyellow;
+    box-shadow: 5px 5px 2px rgb(168, 157, 157); */
+  }
+
+  input {
+    margin: 0 5px;
+    /* display:block; */
+    background-color: #ee6352;
+    color: white;
+  }
+  label {
+    justify-items: right;
+    text-align: end;
+    /* display: block; */
+  }
+
+  .form-container {
+    padding-top: 2.5rem;
+    display: block;
+    text-align: center;
+    margin: 10% 0;
+
+    width: 90%;
+
+  }
+  form {
+    width: 90%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: right;
+  }
+  .row {
+    margin: 10px 0;
+  }
+
+  legend {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  /* Override chrome's forced yellow background color */
+  .inputBgOpaque:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 100px white inset;
+  }
+
+  .contact-field {
+      width: 90%;
+      /* padding-left: 10px; */
+  }

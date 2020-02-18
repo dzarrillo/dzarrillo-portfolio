@@ -1,0 +1,17 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+
+.resume-container {
+  margin-top: 100px;
+  border: 1px solid darkgray;
+  box-shadow: 5px 5px 2px rgb(168, 157, 157);
+  /* background-color: lightyellow; */
+  padding-top: 10px;
+}
