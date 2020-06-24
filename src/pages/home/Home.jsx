@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <Slide right>
-        <h3>Hi, I'm Don</h3>
+        <h3 className={"port-title"}>Hi, I'm Don</h3>
         <h4>
           A freelance web developer specialized in front-end and back-end
           development.
