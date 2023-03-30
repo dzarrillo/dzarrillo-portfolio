@@ -1,9 +1,9 @@
 import React from "react";
 
-import BooCamp from "../../assets/photos/boocamp.jpg";
-import Burger from "../../assets/photos/burger-logo.png";
+import Creason from "../../assets/photos/creason.svg";
+import ZTek from "../../assets/photos/zTek.svg";
 import Healthy from "../../assets/photos/PurposelyHealthy.png";
-import ClickyGame from "../../assets/photos/clickygame.png";
+import SearchPartners from "../../assets/photos/searchpartners.svg";
 import KearaKorner from "../../assets/photos/kearakorner.jpg";
 import DZartek from "../../assets/photos/dzartek.jpg";
 import Denise from "../../assets/photos/denise.jpg";
@@ -21,7 +21,7 @@ const Projects = [
       "Built a custom web site for client that allows users to browse all the services and reach out to the proprietor directly for services using React.js, Material-UI, Edamam API and Sendgrid API.",
     linkto: "http://denise-portfolio.s3-website-us-east-1.amazonaws.com/",
     linkgithub: "https://github.com/dzarrillo?tab=repositories",
-    tech: "A personal digital portfolio that was developed using HTML and CSS."
+    tech: "A personal digital portfolio that was developed using HTML and CSS.",
   },
   {
     count: 1,
@@ -31,7 +31,7 @@ const Projects = [
     summary: "",
     linkto: "http://dzartek.com/",
     linkgithub: "https://github.com/dzarrillo/DZartek",
-    tech: "This site was developed using HTML and CSS."
+    tech: "This site was developed using HTML and CSS.",
   },
   {
     count: 2,
@@ -42,8 +42,7 @@ const Projects = [
       "Built a custom web site for a health coach that allows users to browse all the services and reach out to the proprietor directly for services using React.js, Material-UI, Edamam API and Sendgrid API.",
     linkto: "http://www.purposelyhealthy.net/home",
     linkgithub: "https://github.com/dzarrillo?tab=repositories",
-    tech:
-      "This app was created using react.js, material-ui for styling and axios for the api call recipes."
+    tech: "This app was created using react.js, material-ui for styling and axios for the api call recipes.",
   },
   {
     count: 3,
@@ -53,29 +52,25 @@ const Projects = [
     summary: "The summary for the project will go here",
     linkto: "https://kearaskorner.herokuapp.com",
     linkgithub: "https://github.com/dzarrillo/KearasKorner",
-    tech:
-      "Ecommerce site used for selling clothes was developed using react.js, redux.js & firebase."
+    tech: "Ecommerce site used for selling clothes was developed using react.js, redux.js & firebase.",
   },
   {
     count: 4,
-    url: Burger,
-    title: "Burger",
+    url: ZTek,
+    title: "Z-Tek",
     description:
-      "Burger app that let's you create and then order your own burger",
+      "Z-Tek is an AI company that developed a facial recognition API to be used by Software engineers.",
     summary:
-      "The Burger app allows you to create your own burger and shows the cost of each item you select for your burger." +
-      "  Once completed making your burger you can submit your order to be filled.",
-    linkto: "https://dzarrillo.github.io/burger-basics/",
+      "Z-Tek is an AI company that developed a facial recognition API to be used by Software engineers.",
+    linkto: "https://dzarrillo.github.io/z-tek/",
     linkgithub: "https://github.com/dzarrillo/burger-basics",
-    tech:
-      "This app was created with react.js for the front-end and firebase database."
+    tech: "This app was created using react.js.",
   },
   {
     count: 5,
-    url: BooCamp,
-    title: "BooCamp",
-    description:
-      "Boo!camp Spot allows users to view haunted places from around the world. ",
+    url: Creason,
+    title: "Creason",
+    description: "Digital portfolio. ",
     summary:
       "Each place has a card with its title, location, description, and image. " +
       "Places can be filtered by type (Building, Forests, Prisons, etc.). " +
@@ -85,22 +80,21 @@ const Projects = [
       "reviews. On the user's profile page, places and reviews created by the user " +
       "can be edited or deleted. Other information, such as the user's avatar image, " +
       "username, and 'boo day' (date of sign up) is also displayed.",
-    linkto: "https://boocamp-spot.herokuapp.com/",
+    linkto: "http://creason.s3-website-us-east-1.amazonaws.com/",
     linkgithub: "https://github.com/dzarrillo?tab=repositories",
-    tech: "This app uses a node.js, express, handlebars and MySQL database."
+    tech: "This app uses a node.js, express, handlebars and MySQL database.",
   },
   {
     count: 6,
-    url: ClickyGame,
-    title: "Clicky game",
-    description: "Memory game.",
+    url: SearchPartners,
+    title: "Search Partners",
+    description: "Employment agency.",
     summary:
       "Click on the images to gain points. Try to remember which images you have already clicked. If you click the same image twice, it's game over! ",
-    linkto: "https://dzarrillo.github.io/clickygame/",
+    linkto: "http://bellog.s3-website-us-east-1.amazonaws.com/home",
     linkgithub: "https://github.com/dzarrillo/clickygame",
-    tech:
-      "This site uses ReactJS to dynamically update a player's score and the positioning of tiles through state."
-  }
+    tech: "This site uses ReactJS to dynamically update a player's score and the positioning of tiles through state.",
+  },
 ];
 
 const Portfolio = () => {
@@ -113,7 +107,7 @@ const Portfolio = () => {
       </Roll>
 
       <div className="portfolio-card-container">
-        {Projects.map(project => {
+        {Projects.map((project) => {
           return (
             <Roll key={project.title} right>
               <div className="portfolio-card middle">
