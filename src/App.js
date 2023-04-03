@@ -33,7 +33,7 @@ function App() {
               </Switch>
             </Col>
           </Row>
-          
+
           {/* <hr></hr>
 
           <Row id="resume" className="justify-content-center row-resume" >
