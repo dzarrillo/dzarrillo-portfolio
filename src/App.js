@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route, Routes, HashRouter } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 import NoMatch from "./pages/nomatch/NoMatch";
@@ -15,22 +15,24 @@ import "./App.css";
 function App() {
   return (
     <div className="app-container">
-      <Router>
+      <HashRouter>
         <Layout>
           <Row className="section-a">
             <Col sm={12} md={4}>
               <Sidebar></Sidebar>
             </Col>
             <Col sm={12} md={8}>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/home" component={Home} />
-                <Route exact path="/portfolio" component={Portfolio} />
-                <Route exact path="/contact" component={Contact} />
-                <Route exact path="/skills" component={Skills} />
-                <Route exact path="/resume" component={MyResume} />
-                <Route component={NoMatch} />
-              </Switch>
+              {/* <HashRouter> */}
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/resume" element={<MyResume />} />
+                {/* <Route component={NoMatch} /> */}
+              </Routes>
+              {/* </HashRouter> */}
             </Col>
           </Row>
 
@@ -40,7 +42,7 @@ function App() {
             <MyResume></MyResume>
           </Row> */}
         </Layout>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
