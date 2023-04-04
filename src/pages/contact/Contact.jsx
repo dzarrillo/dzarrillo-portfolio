@@ -10,10 +10,10 @@ class Contact extends Component {
       recipient: "donZarrillo@gmail.com",
       sender: "",
       subject: "Resume",
-      text: ""
+      text: "",
     },
     open: false,
-    dialogMsg: ""
+    dialogMsg: "",
   };
   handleClickOpen = () => {
     this.setState({ open: true });
@@ -22,17 +22,17 @@ class Contact extends Component {
     this.setState({ open: false });
   };
 
-  sendEmail = e => {
+  sendEmail = (e) => {
     const { email } = this.state;
     this.setState({
-      dialogMsg: "Thank you for your response - Don Zarrillo Jr."
+      dialogMsg: "Thank you for your response - Don Zarrillo Jr.",
     });
     console.log(`Email-Rec: ${email.recipient} Email-Sender: ${email.sender}`);
     console.log(`Email-Subject: ${email.subject} Email-text: ${email.text}`);
 
     fetch(`/send-email?recipient=
       ${email.recipient}&sender=${email.sender}&topic=${email.subject}&text=${email.text}`).catch(
-      err => {
+      (err) => {
         console.error(err);
         this.setState({ dialogMsg: "Error sending email!" });
         // this.handleClickOpen();
@@ -43,7 +43,7 @@ class Contact extends Component {
     e.target.reset();
   };
 
-  handleOnChange = e => {
+  handleOnChange = (e) => {
     e.preventDefault();
     const { email } = this.state;
 
@@ -68,17 +68,17 @@ class Contact extends Component {
     }
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
     console.log("Button sebmitted");
-    this.sendEmail(e);
+    // this.sendEmail(e);
   };
 
   render() {
     return (
       <Roll left>
         <div className="form-container">
-          <form id="form_contact" action="" method="post">
+          <form id="form_contact" action="">
             <fieldset>
               <legend>Contact Me</legend>
               <div className="row">

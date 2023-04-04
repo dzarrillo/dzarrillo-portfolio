@@ -51,7 +51,7 @@ const Projects = [
     description: "Ecommerce site",
     summary: "The summary for the project will go here",
     linkto: "https://kearaskorner.herokuapp.com",
-    linkgithub: "https://github.com/dzarrillo/KearasKorner",
+    linkgithub: "https://github.com/dzarrillo?tab=repositories",
     tech: "Ecommerce site used for selling clothes was developed using react.js, redux.js & firebase.",
   },
   {
@@ -63,7 +63,7 @@ const Projects = [
     summary:
       "Z-Tek is an AI company that developed a facial recognition API to be used by Software engineers.",
     linkto: "https://dzarrillo.github.io/z-tek/",
-    linkgithub: "https://github.com/dzarrillo/burger-basics",
+    linkgithub: "https://github.com/dzarrillo/z-tek",
     tech: "This app was created using react.js.",
   },
   {
@@ -92,7 +92,7 @@ const Projects = [
     summary:
       "Click on the images to gain points. Try to remember which images you have already clicked. If you click the same image twice, it's game over! ",
     linkto: "http://bellog.s3-website-us-east-1.amazonaws.com/home",
-    linkgithub: "https://github.com/dzarrillo/clickygame",
+    linkgithub: "https://github.com/dzarrillo?tab=repositories",
     tech: "This site uses ReactJS to dynamically update a player's score and the positioning of tiles through state.",
   },
 ];
