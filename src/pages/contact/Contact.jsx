@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 //Transitions
 import Roll from "react-reveal/Roll";
@@ -15,6 +16,7 @@ class Contact extends Component {
     open: false,
     dialogMsg: "",
   };
+
   handleClickOpen = () => {
     this.setState({ open: true });
   };
@@ -22,29 +24,12 @@ class Contact extends Component {
     this.setState({ open: false });
   };
 
-  sendEmail = (e) => {
-    const { email } = this.state;
-    this.setState({
-      dialogMsg: "Thank you for your response - Don Zarrillo Jr.",
-    });
-    console.log(`Email-Rec: ${email.recipient} Email-Sender: ${email.sender}`);
-    console.log(`Email-Subject: ${email.subject} Email-text: ${email.text}`);
-
-    fetch(`/send-email?recipient=
-      ${email.recipient}&sender=${email.sender}&topic=${email.subject}&text=${email.text}`).catch(
-      (err) => {
-        console.error(err);
-        this.setState({ dialogMsg: "Error sending email!" });
-        // this.handleClickOpen();
-      }
-    );
-
-    this.handleClickOpen();
-    e.target.reset();
-  };
-
   handleOnChange = (e) => {
     e.preventDefault();
+    let emailMsg = document.getElementById("email_msg");
+    emailMsg.classList.remove("send_email");
+    emailMsg.classList.add("hide_email");
+
     const { email } = this.state;
 
     const { name, value } = e.target;
@@ -71,14 +56,39 @@ class Contact extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log("Button sebmitted");
-    // this.sendEmail(e);
+
+    emailjs
+      .sendForm(
+        "service_gmail",
+        "template_7ipbalo",
+        e.target,
+        "RZ5v39afhMkjp5f7u"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          let emailMsg = document.getElementById("email_msg");
+          emailMsg.classList.add("send_email");
+          emailMsg.classList.remove("hide_email");
+          // return (
+          //   <div>
+          //     <h2>Email was sent successfully!</h2>
+          //   </div>
+          // );
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
   };
 
   render() {
     return (
       <Roll left>
         <div className="form-container">
-          <form id="form_contact" action="">
+          <form id="form_contact" onSubmit={this.handleSubmit}>
             <fieldset>
               <legend>Contact Me</legend>
               <div className="row">
@@ -86,7 +96,7 @@ class Contact extends Component {
                 <input
                   type="text"
                   className="contact-field inputBgOpaque"
-                  name="firstname"
+                  name="from_name"
                   id="firstname"
                   required
                   placeholder="First Name"
@@ -120,6 +130,11 @@ class Contact extends Component {
 
               <div className="row">
                 <input type="submit" id="submit" name="submit" value="Send" />
+              </div>
+              <div className="row">
+                <h2 id="email_msg" className="hide_email">
+                  Email was sent successfully!
+                </h2>
               </div>
             </fieldset>
           </form>
