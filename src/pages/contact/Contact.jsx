@@ -60,9 +60,9 @@ class Contact extends Component {
     emailjs
       .sendForm(
         "service_gmail",
-        "template_7ipbalo",
+        process.env.REACT_APP_EMAIL_TEMPLATE,
         e.target,
-        "RZ5v39afhMkjp5f7u"
+        process.env.REACT_APP_EMAILJS_ID
       )
       .then(
         (result) => {
