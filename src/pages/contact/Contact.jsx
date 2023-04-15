@@ -8,7 +8,7 @@ class Contact extends Component {
   state = {
     email: {
       name: "",
-      recipient: "donZarrillo@gmail.com",
+      recipient: "",
       sender: "",
       subject: "Resume",
       text: "",
