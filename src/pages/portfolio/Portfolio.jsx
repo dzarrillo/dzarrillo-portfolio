@@ -72,15 +72,7 @@ const Projects = [
     url: Creason,
     title: "Creason",
     description: "Digital portfolio. ",
-    summary:
-      "Each place has a card with its title, location, description, and image. " +
-      "Places can be filtered by type (Building, Forests, Prisons, etc.). " +
-      "After clicking the card, the user is directed to the places" +
-      " page, which also shows reviews and accounts from other users who have visited." +
-      "Users who have signed up can create new places as well as submit their own " +
-      "reviews. On the user's profile page, places and reviews created by the user " +
-      "can be edited or deleted. Other information, such as the user's avatar image, " +
-      "username, and 'boo day' (date of sign up) is also displayed.",
+    summary: "",
     linkto: "http://creason.s3-website-us-east-1.amazonaws.com/",
     linkgithub: "https://github.com/dzarrillo?tab=repositories",
     tech: "This app uses a node.js, express, handlebars and MySQL database.",
@@ -103,8 +95,8 @@ const Projects = [
     description: "A demo of a Full Mern stack.",
     summary:
       "Full mern stack that implements axios best practices using Get, Post, and Delete methods utilizing a Mongo database. ",
-    linkto: "http://bellog.s3-website-us-east-1.amazonaws.com/home",
-    linkgithub: "https://github.com/dzarrillo?tab=repositories",
+    linkto: "https://dzarrillo.github.io/axios-demo/",
+    linkgithub: "https://github.com/dzarrillo/axios-demo",
     tech: "Full mern stack that implements axios best practices using Get, Post, and Delete methods utilizing a Mongo database. ",
   },
 ];
