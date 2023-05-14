@@ -7,6 +7,7 @@ import SearchPartners from "../../assets/photos/searchpartners.svg";
 import KearaKorner from "../../assets/photos/kearakorner.jpg";
 import DZartek from "../../assets/photos/dzartek.jpg";
 import Denise from "../../assets/photos/denise.jpg";
+import Axios from "../../assets/photos/axios.svg";
 //Transitions
 import Roll from "react-reveal/Roll";
 import "./Portfolio.css";
@@ -93,7 +94,18 @@ const Projects = [
       "Click on the images to gain points. Try to remember which images you have already clicked. If you click the same image twice, it's game over! ",
     linkto: "http://bellog.s3-website-us-east-1.amazonaws.com/home",
     linkgithub: "https://github.com/dzarrillo?tab=repositories",
-    tech: "This site uses ReactJS to dynamically update a player's score and the positioning of tiles through state.",
+    tech: "Reactjs front-end",
+  },
+  {
+    count: 7,
+    url: Axios,
+    title: "Axios Demo",
+    description: "A demo of a Full Mern stack.",
+    summary:
+      "Full mern stack that implements axios best practices using Get, Post, and Delete methods utilizing a Mongo database. ",
+    linkto: "http://bellog.s3-website-us-east-1.amazonaws.com/home",
+    linkgithub: "https://github.com/dzarrillo?tab=repositories",
+    tech: "Full mern stack that implements axios best practices using Get, Post, and Delete methods utilizing a Mongo database. ",
   },
 ];
 
